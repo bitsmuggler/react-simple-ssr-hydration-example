@@ -8,8 +8,7 @@
     "build:server": "webpack --config webpack/server.config.cjs",
     "build": "npm run build:client && npm run build:server",
     "start:dev": "concurrently \"npm run build:server && nodemon --exec babel-node src/server/index.js\"  \"npm run build:client -- --watch\"",
-    "start": "npm run start:dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run start:dev"
   },
   "keywords": [],
   "author": "",

@@ -2,7 +2,7 @@ const path = require('path');
 const externals = require('webpack-node-externals');
 
 module.exports = {
-    target: 'node', // Since target is node not browser
+    target: 'node',
     entry: "./src/server/index.js", 
     mode: 'production',
     output: {
@@ -12,7 +12,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     },
-    externals: [externals()], // will not bundle node modules
+    externals: [externals()],
     module: {
         rules: [
             {
