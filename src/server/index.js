@@ -23,7 +23,6 @@ app.get("*", (req, res) => {
       </head>
       <body>
         <div id="root">${html}</div>
-        <script>debugger;</script>
         <script src="/bundle.js"></script>
       </body>
     </html>
