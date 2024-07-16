@@ -1,17 +1,17 @@
-import express from 'express';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom/server';
-import App from '../client/App';
+import express from "express";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router-dom/server";
+import App from "../client/App";
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.get('*', (req, res) => {
+app.get("*", (req, res) => {
   const html = renderToString(
     <StaticRouter location={req.url}>
       <App />
-    </StaticRouter>
+    </StaticRouter>,
   );
   res.send(
     `
@@ -27,12 +27,12 @@ app.get('*', (req, res) => {
         <script src="/bundle.js"></script>
       </body>
     </html>
-  `
+  `,
   );
 });
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log('Server is running on port: ', port);
+  console.log("Server is running on port: ", port);
 });

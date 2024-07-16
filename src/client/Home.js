@@ -1,10 +1,9 @@
 const Home = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-            <p>Welcome to the Home page!</p>
-        </div>
-    );
+  return (
+    <div>
+      <p>Go to the SSR and hydrated <a href="/counter">interactive part</a></p>
+    </div>
+  );
 };
 
 export default Home;
